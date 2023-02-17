@@ -10,8 +10,8 @@ const TaskList = ({ tasks, onTaskAdded }) => {
                 <div className="taskList__task" key={index}>
                     <p>{task.name}</p>
                     <p><>{task.desc}</></p>
+                    <p>{task.date}</p>
                     <div className="taskList__buttons">
-                        <button>Done</button>
                         <button>Delete</button>
                     </div>
                 </div>

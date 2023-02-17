@@ -10,23 +10,28 @@ import TaskList from './components/TaskList/TaskList';
 interface Task {
   name: string;
   desc: string;
+  date: string;
 }
 
 
 
 export const mockedTaskList: Task[] = [{
   name: "pójść na siłkę",
-  desc: "dupa1"
+  desc: "dupa1",
+  date: Date().slice(4, 24),
 }, {
   name: "pójść na siłkę",
-  desc: "dupa1"
+  desc: "dupa1",
+  date: Date().slice(4, 24),
 }, {
   name: "pójść na siłkę",
-  desc: "dupa1"
+  desc: "dupa1",
+  date: Date().slice(4, 24),
 },
 {
   name: "pójść na siłkę",
-  desc: "dupa1"
+  desc: "dupa1",
+  date: Date().slice(4, 24),
 }
 ]
 
