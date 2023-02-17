@@ -14,7 +14,7 @@ const AddTask = ({ onTaskAdded }) => {
 
     const handleAdd = () => {
         handleDisplay();
-        const newTask = { name: taskInput, desc: descInput }
+        const newTask = { name: taskInput, desc: descInput, date: Date().slice(4, 24), }
         // const newMockedTaskList = [...mockedTaskList, newTask]
 
         // mockedTaskList.length = 0;

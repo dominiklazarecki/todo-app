@@ -1,7 +1,6 @@
 .taskList {
     display: flex;
     flex-direction: column;
-
     width: 800px;
     margin: 0 auto;
     background-color: #8bb174;
@@ -21,7 +20,11 @@
         border-radius: 15px;
         border: 1px solid #0c1414;
 
-        &p {}
+        & p {
+            // flex: 1 1 auto;
+            flex-basis: 33%;
+            // flex-grow: 1;
+        }
 
     }
 
