@@ -1,26 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import TaskList from './components/TaskList/TaskList';
+
+
+
+
+interface Task {
+  name: string;
+  desc: string;
+}
+
+
+
+export const mockedTaskList: Task[] = [{
+  name: "pójść na siłkę",
+  desc: "dupa1"
+}, {
+  name: "pójść na siłkę",
+  desc: "dupa1"
+}, {
+  name: "pójść na siłkę",
+  desc: "dupa1"
+},
+{
+  name: "pójść na siłkę",
+  desc: "dupa1"
+}
+]
+
+
+const App = () => {
+
+  const [taskList, setTaskList] = useState<Task[]>(mockedTaskList)
+
+  const handleTaskAdded = (task) => {
+    setTaskList((prev) => {
+      return [...prev, task]
+    })
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>ToDoApp</h1>
+      <TaskList tasks={taskList} onTaskAdded={handleTaskAdded} />
+
     </div>
-  );
+  )
 }
 
 export default App;
